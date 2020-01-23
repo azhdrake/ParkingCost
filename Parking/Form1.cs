@@ -21,14 +21,17 @@ namespace Parking
     {
       bool creditValid = Double.TryParse(txtCreditAdded.Text, out double creditAdded);
       bool costOneParkWithCardValid = Double.TryParse(txtOneParkWithCard.Text, out double costOneParkWithCard);
+      bool costOneParkWithoutCardValid = Double.TryParse(txtOneParkNoCard.Text, out double costOneParkWithoutCard);
 
-      if(creditValid && costOneParkWithCardValid)
+      if (creditValid && costOneParkWithCardValid)
       {
         int daysParking = (int)(creditAdded / costOneParkWithCard);
         double creditRemaining = creditAdded % costOneParkWithCard;
+        double savingsCalc = (costOneParkWithoutCard * daysParking) - (costOneParkWithCard * daysParking);
 
         txtDaysParking.Text = daysParking.ToString();
         txtCreditRemaining.Text = creditRemaining.ToString("c");
+        txtSavings.Text = savingsCalc.ToString("c");
       }
       else
       {

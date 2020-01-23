@@ -40,6 +40,8 @@
       this.label3 = new System.Windows.Forms.Label();
       this.label4 = new System.Windows.Forms.Label();
       this.label5 = new System.Windows.Forms.Label();
+      this.label6 = new System.Windows.Forms.Label();
+      this.txtSavings = new System.Windows.Forms.TextBox();
       this.SuspendLayout();
       // 
       // button1
@@ -54,7 +56,7 @@
       // 
       // button2
       // 
-      this.button2.Location = new System.Drawing.Point(394, 446);
+      this.button2.Location = new System.Drawing.Point(394, 482);
       this.button2.Name = "button2";
       this.button2.Size = new System.Drawing.Size(130, 43);
       this.button2.TabIndex = 1;
@@ -145,11 +147,30 @@
       this.label5.TabIndex = 11;
       this.label5.Text = "Credit remaining";
       // 
+      // label6
+      // 
+      this.label6.AutoSize = true;
+      this.label6.Location = new System.Drawing.Point(23, 432);
+      this.label6.Name = "label6";
+      this.label6.Size = new System.Drawing.Size(89, 25);
+      this.label6.TabIndex = 12;
+      this.label6.Text = "Savings";
+      // 
+      // txtSavings
+      // 
+      this.txtSavings.Location = new System.Drawing.Point(394, 426);
+      this.txtSavings.Name = "txtSavings";
+      this.txtSavings.ReadOnly = true;
+      this.txtSavings.Size = new System.Drawing.Size(130, 31);
+      this.txtSavings.TabIndex = 13;
+      // 
       // Form1
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(555, 542);
+      this.ClientSize = new System.Drawing.Size(555, 598);
+      this.Controls.Add(this.txtSavings);
+      this.Controls.Add(this.label6);
       this.Controls.Add(this.label5);
       this.Controls.Add(this.label4);
       this.Controls.Add(this.label3);
@@ -183,6 +204,8 @@
     private System.Windows.Forms.Label label3;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Label label5;
+    private System.Windows.Forms.Label label6;
+    private System.Windows.Forms.TextBox txtSavings;
   }
 }
 
