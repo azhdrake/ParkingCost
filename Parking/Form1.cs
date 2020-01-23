@@ -24,7 +24,15 @@ namespace Parking
 
       if(creditValid && costOneParkWithCardValid)
       {
+        int daysParking = (int)(creditAdded / costOneParkWithCard);
+        double creditRemaining = creditAdded % costOneParkWithCard;
 
+        txtDaysParking.Text = daysParking.ToString();
+        txtCreditRemaining.Text = creditRemaining.ToString("c");
+      }
+      else
+      {
+        MessageBox.Show("Please enter numbers", "Error");
       }
 
     }
