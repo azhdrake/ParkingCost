@@ -16,5 +16,17 @@ namespace Parking
     {
       InitializeComponent();
     }
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+      bool creditValid = Double.TryParse(txtCreditAdded.Text, out double creditAdded);
+      bool costOneParkWithCardValid = Double.TryParse(txtOneParkWithCard.Text, out double costOneParkWithCard);
+
+      if(creditValid && costOneParkWithCardValid)
+      {
+
+      }
+
+    }
   }
 }

@@ -30,11 +30,11 @@
     {
       this.button1 = new System.Windows.Forms.Button();
       this.button2 = new System.Windows.Forms.Button();
-      this.textBox1 = new System.Windows.Forms.TextBox();
-      this.textBox2 = new System.Windows.Forms.TextBox();
-      this.textBox3 = new System.Windows.Forms.TextBox();
-      this.textBox4 = new System.Windows.Forms.TextBox();
-      this.textBox5 = new System.Windows.Forms.TextBox();
+      this.txtCreditAdded = new System.Windows.Forms.TextBox();
+      this.txtOneParkNoCard = new System.Windows.Forms.TextBox();
+      this.txtOneParkWithCard = new System.Windows.Forms.TextBox();
+      this.txtDaysParking = new System.Windows.Forms.TextBox();
+      this.txtCreditRemaining = new System.Windows.Forms.TextBox();
       this.label1 = new System.Windows.Forms.Label();
       this.label2 = new System.Windows.Forms.Label();
       this.label3 = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
       this.button1.TabIndex = 0;
       this.button1.Text = "&Caculate";
       this.button1.UseVisualStyleBackColor = true;
+      this.button1.Click += new System.EventHandler(this.button1_Click);
       // 
       // button2
       // 
@@ -60,40 +61,44 @@
       this.button2.Text = "E&xit";
       this.button2.UseVisualStyleBackColor = true;
       // 
-      // textBox1
+      // txtCreditAdded
       // 
-      this.textBox1.Location = new System.Drawing.Point(394, 34);
-      this.textBox1.Name = "textBox1";
-      this.textBox1.Size = new System.Drawing.Size(130, 31);
-      this.textBox1.TabIndex = 2;
+      this.txtCreditAdded.Location = new System.Drawing.Point(394, 34);
+      this.txtCreditAdded.Name = "txtCreditAdded";
+      this.txtCreditAdded.Size = new System.Drawing.Size(130, 31);
+      this.txtCreditAdded.TabIndex = 2;
       // 
-      // textBox2
+      // txtOneParkNoCard
       // 
-      this.textBox2.Location = new System.Drawing.Point(394, 107);
-      this.textBox2.Name = "textBox2";
-      this.textBox2.Size = new System.Drawing.Size(130, 31);
-      this.textBox2.TabIndex = 3;
+      this.txtOneParkNoCard.Location = new System.Drawing.Point(394, 107);
+      this.txtOneParkNoCard.Name = "txtOneParkNoCard";
+      this.txtOneParkNoCard.Size = new System.Drawing.Size(130, 31);
+      this.txtOneParkNoCard.TabIndex = 3;
+      this.txtOneParkNoCard.Text = "5.00";
       // 
-      // textBox3
+      // txtOneParkWithCard
       // 
-      this.textBox3.Location = new System.Drawing.Point(394, 175);
-      this.textBox3.Name = "textBox3";
-      this.textBox3.Size = new System.Drawing.Size(130, 31);
-      this.textBox3.TabIndex = 4;
+      this.txtOneParkWithCard.Location = new System.Drawing.Point(394, 175);
+      this.txtOneParkWithCard.Name = "txtOneParkWithCard";
+      this.txtOneParkWithCard.Size = new System.Drawing.Size(130, 31);
+      this.txtOneParkWithCard.TabIndex = 4;
+      this.txtOneParkWithCard.Text = "2.50";
       // 
-      // textBox4
+      // txtDaysParking
       // 
-      this.textBox4.Location = new System.Drawing.Point(394, 309);
-      this.textBox4.Name = "textBox4";
-      this.textBox4.Size = new System.Drawing.Size(130, 31);
-      this.textBox4.TabIndex = 5;
+      this.txtDaysParking.Location = new System.Drawing.Point(394, 309);
+      this.txtDaysParking.Name = "txtDaysParking";
+      this.txtDaysParking.ReadOnly = true;
+      this.txtDaysParking.Size = new System.Drawing.Size(130, 31);
+      this.txtDaysParking.TabIndex = 5;
       // 
-      // textBox5
+      // txtCreditRemaining
       // 
-      this.textBox5.Location = new System.Drawing.Point(394, 370);
-      this.textBox5.Name = "textBox5";
-      this.textBox5.Size = new System.Drawing.Size(130, 31);
-      this.textBox5.TabIndex = 6;
+      this.txtCreditRemaining.Location = new System.Drawing.Point(394, 370);
+      this.txtCreditRemaining.Name = "txtCreditRemaining";
+      this.txtCreditRemaining.ReadOnly = true;
+      this.txtCreditRemaining.Size = new System.Drawing.Size(130, 31);
+      this.txtCreditRemaining.TabIndex = 6;
       // 
       // label1
       // 
@@ -150,11 +155,11 @@
       this.Controls.Add(this.label3);
       this.Controls.Add(this.label2);
       this.Controls.Add(this.label1);
-      this.Controls.Add(this.textBox5);
-      this.Controls.Add(this.textBox4);
-      this.Controls.Add(this.textBox3);
-      this.Controls.Add(this.textBox2);
-      this.Controls.Add(this.textBox1);
+      this.Controls.Add(this.txtCreditRemaining);
+      this.Controls.Add(this.txtDaysParking);
+      this.Controls.Add(this.txtOneParkWithCard);
+      this.Controls.Add(this.txtOneParkNoCard);
+      this.Controls.Add(this.txtCreditAdded);
       this.Controls.Add(this.button2);
       this.Controls.Add(this.button1);
       this.Name = "Form1";
@@ -168,11 +173,11 @@
 
     private System.Windows.Forms.Button button1;
     private System.Windows.Forms.Button button2;
-    private System.Windows.Forms.TextBox textBox1;
-    private System.Windows.Forms.TextBox textBox2;
-    private System.Windows.Forms.TextBox textBox3;
-    private System.Windows.Forms.TextBox textBox4;
-    private System.Windows.Forms.TextBox textBox5;
+    private System.Windows.Forms.TextBox txtCreditAdded;
+    private System.Windows.Forms.TextBox txtOneParkNoCard;
+    private System.Windows.Forms.TextBox txtOneParkWithCard;
+    private System.Windows.Forms.TextBox txtDaysParking;
+    private System.Windows.Forms.TextBox txtCreditRemaining;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.Label label3;
